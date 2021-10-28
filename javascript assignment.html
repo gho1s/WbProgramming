@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Javascript In Class </title>
+	</head>
+	
+	<style>
+	body{background-color:#ff6347; }
+	h1{font-family: Helvetica,Arial;}
+	h2{font-family: Arial;}
+	p{
+	font-family: Courier;
+	font-size: 20px;
+	text-decoration: underline white;
+	color:"purple";
+	}
+	div{background-color: yellow;
+	font-family: 'Brush Script MT' , cursive;
+	font-size: 30;
+	margin: auto;
+	border: 3px solid black;
+	text-align:center;
+	width: 200px;
+	height: 200px;
+	padding: 30px;
+	}
+	</style>
+	
+	<body onload ="loadMessage()">
+	<h1 id="header1"> Testing  Javascript Class </h1> <br><br>
+	
+	<p id="para1"> Iron Man is a superhero appearing in American comic books published by Marvel Comics. The character was co-created by writer and editor Stan Lee,
+	developed by scripter Larry Lieber, and designed by artists Don Heck and Jack Kirby. The character made his first appearance in Tales of Suspense #39 (cover dated March 1963), 
+	and received his own title in Iron Man #1 (May 1968). Also in 1963, the character founded the Avengers alongside Thor, Ant-Man, Wasp and the Hulk.</p> <br><br>
+	
+	<p1 id = "para2"> A wealthy American business magnate, playboy, philanthropist, inventor and ingenious scientist, Anthony Edward "Tony"
+	Stark suffers a severe chest injury during a kidnapping. When his captors attempt to force him to build a weapon of mass destruction, he instead creates a
+	mechanized suit of armor to save his life and escape captivity. Later, Stark develops his suit, adding weapons and other technological devices he designed
+	through his company, Stark Industries. He uses the suit and successive versions to protect the world as Iron Man. 
+	Although at first concealing his true identity, Stark eventually publicly reveals himself to be Iron Man.</p1> <br> <br>
+	
+	<h2 id="header2"> Creating Javascript Buttons </h2> <br><br>
+	
+	<input type = "button" onclick = "button1()" value = "Annoucement" /> <br><br>
+	
+	<script type = "text/javascript">
+	function button1(){
+	alert("NBa season is back on tv")
+	}
+	</script>
+	
+	<input type = "button" onclick = "button2()" value = "Color Magic" /> <br><br>
+	
+	<script type = "text/javascript">
+	function button2(){
+	document.getElementById("header1").style.color ="red";
+	document.getElementById("header2").style.color ="purple";
+	document.getElementById("para1").style.color ="yellow";
+	document.getElementById("para2").style.color ="blue";
+	}
+	
+	</script>
+	
+	<p> Try our majic trick below. It has a hidden message.</p> <br><br>
+	
+	<div onmouseover = "moveOV(this)" onmouseout = "moveout(this)"> Hidden Message </div>
+	
+	<script>
+	function moveOV(obj){
+	obj.innerHTML = "This is a hiiden message. If you are reading this, your mouse is over the yellow box."
+	}
+	function moveout(obj){
+	
+	obj.innerHTML ="Hidden Message"
+	}
+	</script>
+	<br><br>
+	<p> Click the Words Below </p> <br><br>
+	<h2 onclick = "textSwap(this)"> Javascript Event handlers can be used to create diffrent effects on your webpage!</h2><br><br>
+	<script>
+		function textSwap (obj) {
+		obj.innerHTML =" If you are seeing this text, you clicked on the previous message. Majic Words!";
+		}
+		</script>
+		<div onmousedown = "clickDown(this, 'white')" onmouseup = "clickUp(this, 'black')" style ="background-color: maroon;width500px;height:150px;padding:40px:"> Click Me!</div>
+		<script>
+		function clickDown(obj) {
+		obj.style.backgroundColor = "light blue";
+		obj.style.font = "monospace";
+		obj.innerHTML = "Outh that hurts! Let me go!";}
+		function clickUp(obj){
+		obj.style.backgroundColor = "maroon";
+		obj.innerHTML = "Thank you for releasing me !";
+		}
+		</script>
+		<script>
+		function loadMessage(){
+		alert("This website contains secret content. You must accept terms to go to the website.");
+		}
+		</script>
+		<br><br>
+		<h3 onmouseover = "style.color = 'green'" onmouseout= "style.color = 'black'"> Moe your mouse over this text </h3>
+	
+	
+	
+	
+	
+	
+	
+	</body>
+
+</html>
